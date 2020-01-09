@@ -4,7 +4,7 @@ Minimal test to see how well [__zstd__](https://github.com/facebook/zstd) (__zst
 
 Instead of using the whole Pfam-A.full.gz, only the first 1000,000,000 bytes were considered.
 
-The result:
+# Result:
 
 | type          | file size | read speed | 
 | ------------- |  ------: | ------: |
@@ -13,8 +13,16 @@ The result:
 | zstd          | 431850930 |  1536MB/s |
 
 
-As for the details read below:
+This benchmark was done on a computer with
 
+* __Disk__: HDD (i.e. a normal SATA mechanical hard drive).
+* __CPU__: AMD Ryzen 5 1600 Six-Core Processor
+* __Operating system__: Ubuntu 18.04.3
+
+
+
+
+# Details
 ## Install zstd
 
 ### Install zstd on Fedora
@@ -56,13 +64,7 @@ ninja && ninja install
 
 ### Benchmark zstd on Pfam-A.full.gz
 
-This benchmark was done on a computer with
-
-* __Disk__: HDD (i.e. a normal SATA mechanical hard drive).
-* __CPU__: AMD Ryzen 5 1600 Six-Core Processor
-* __Operating system__: Ubuntu 18.04.3
-
-The result: 
+Shell session of the benchmark:
 
 ```
 testuser@linuxdesktop:~$ ~/installdir/bin/zstdmt --version
