@@ -40,7 +40,7 @@ Run `sudo apt-get install zstd`
 
 ### Install zstd from source code
 
-Right now (9 January 2020) the latest version is __1.4.4__.
+Right now (9 January 2020) the latest version of zstd is __1.4.4__.
 If you read these instructions some time in the future replace __1.4.4__ with
 the latest version.
 
