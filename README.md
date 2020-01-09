@@ -1,5 +1,5 @@
 # compress-pfam-data-benchmark-zstd
-Minimal test to see how well [__zstd__](https://github.com/facebook/zstd) (__zstandard__) compression compares to gz for the datafile Pfam-A.full.gz downloadable from [ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.full.gz](ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.full.gz).
+Minimal test to see how well [__zstd__](https://github.com/facebook/zstd) (__zstandard__) compression compares to [__gzip__](https://en.wikipedia.org/wiki/Gzip) for the datafile _Pfam-A.full.gz_ that is downloadable from [ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.full.gz](ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.full.gz).
 
 
 Instead of using the whole Pfam-A.full.gz, only the first 1000,000,000 bytes were considered.
@@ -9,7 +9,7 @@ The result:
 | type          | file size | read speed | 
 | ------------- |  ------: | ------: |
 | uncompressed  | 9703136359| 527MB/s |
-| gz            | 1000000000 |  220MB/s  |
+| gzip          | 1000000000 |  220MB/s  |
 | zstd          | 431850930 |  1536MB/s |
 
 
