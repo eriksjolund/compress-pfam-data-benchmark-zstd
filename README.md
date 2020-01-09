@@ -99,3 +99,7 @@ user	0m41,592s
 sys	0m0,420s
 testuser@linuxdesktop:~$ 
 ```
+
+To avoid that the Linux caching system has any influence on the  benchmark, the command
+`sync && sudo su -c "echo 3 > /proc/sys/vm/drop_caches"` was run before each 
+benchmarked command.
