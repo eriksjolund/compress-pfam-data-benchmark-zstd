@@ -13,7 +13,7 @@ Instead of using the whole Pfam-A.full.gz, only the first 1000,000,000 bytes wer
 | zstd          | 431850930 |  1536 MB/s |
 
 
-This benchmark was done on a computer with
+This benchmark was performed on a computer with
 
 * __Disk__: HDD (i.e. a standard SATA mechanical hard drive).
 * __CPU__: AMD Ryzen 5 1600 Six-Core Processor
