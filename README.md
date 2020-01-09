@@ -37,7 +37,7 @@ If you read these instructions some time in the future replace __1.4.4__ with
 the latest version.
 
 
-1. Download the source package from https://github.com/facebook/zstd/releases into the local directory _~/Downloads/stdz-1.4.4.tar.gz_
+1. Download the source package from https://github.com/facebook/zstd/releases into the local directory _~/Downloads/_
 2. Install the ninja build system
    - On Fedora run `sudo dnf install ninja`
    - On Ubuntu run `sudo apt-get install ninja-build`
