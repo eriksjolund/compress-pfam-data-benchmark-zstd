@@ -1,5 +1,5 @@
 # compress-pfam-data-benchmark-zstd
-Minimal test to see how well [zstd](https://github.com/facebook/zstd) (zstandard) compression compares to gz for the datafile Pfam-A.full.gz downloadable from [ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.full.gz](ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.full.gz).
+Minimal test to see how well [__zstd__](https://github.com/facebook/zstd) (__zstandard__) compression compares to gz for the datafile Pfam-A.full.gz downloadable from [ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.full.gz](ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.full.gz).
 
 
 Instead of using the whole Pfam-A.full.gz, only the first 1000,000,000 bytes were considered.
