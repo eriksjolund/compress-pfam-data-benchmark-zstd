@@ -44,12 +44,13 @@ the latest version.
 3. Run the commands
 
 ```
+VERSION=1.4.4
 mkdir ~/installdir
 builddir=$(mktemp -d)
 sourcedir=$(mktemp -d)
-tar -x -C $sourcedir -f ~/Downloads/zstd-1.4.4.tar.gz 
+tar -x -C $sourcedir -f ~/Downloads/zstd-$VERSION.tar.gz 
 cd $builddir
-cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=~/installdir -G Ninja $sourcedir/zstd-1.4.4/build/cmake
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=~/installdir -G Ninja $sourcedir/zstd-$VERSION/build/cmake
 ninja && ninja install
 ```
 
