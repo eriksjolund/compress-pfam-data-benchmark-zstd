@@ -8,9 +8,9 @@ The result:
 
 | type          | file size | read speed | 
 | ------------- |  ------: | ------: |
-| uncompressed  | 9703136359| 527MiB/s |
-| gz            | 1000000000 |  207MiB/s  |
-| zstd          | 431850930 |  813MiB/s |
+| uncompressed  | 9703136359| 527MB/s |
+| gz            | 1000000000 |  220MB/s  |
+| zstd          | 431850930 |  1536MB/s |
 
 
 As for the details read below:
@@ -76,16 +76,24 @@ testuser@linuxdesktop:~$ ls -l pfam.*
 -rw-r--r-- 1 testuser testuser 9703136359 jan  9 14:38 pfam.txt
 -rw-r--r-- 1 testuser testuser  431850930 jan  9 14:49 pfam.txt.zst
 testuser@linuxdesktop:~$ sync && sudo -c "echo 3 > /proc/sys/vm/drop_caches"
-testuser@linuxdesktop:~$ ~/installdir/bin/zstdmt -d -c pfam.txt.zst | pv --average-rate > /dev/null
+testuser@linuxdesktop:~$ time ~/installdir/bin/zstdmt -d -c pfam.txt.zst  > /dev/null
 pfam.txt.zst         : 9703136359 bytes                                         
-[ 813MiB/s]
+
+real	0m6,023s
+user	0m5,764s
+sys	0m0,184s
 testuser@linuxdesktop:~$ sync && sudo -c "echo 3 > /proc/sys/vm/drop_caches"
-testuser@linuxdesktop:~$ cat pfam.txt | pv --average-rate > /dev/null
-[ 527MiB/s]
+testuser@linuxdesktop:~$ time cat pfam.txt  > /dev/null
+
+real	0m17,545s
+user	0m0,016s
+sys	0m3,769s
 testuser@linuxdesktop:~$ sync && sudo -c "echo 3 > /proc/sys/vm/drop_caches"
-testuser@linuxdesktop:~$ gunzip -c pfam.gz | pv --average-rate > /dev/null
-[ 207MiB/s]
+testuser@linuxdesktop:~$ time gunzip -c pfam.gz  > /dev/null
 gzip: pfam.gz: unexpected end of file
-[ 207MiB/s]
+
+real	0m42,051s
+user	0m41,592s
+sys	0m0,420s
 testuser@linuxdesktop:~$ 
 ```
