@@ -6,11 +6,12 @@ Instead of using the whole Pfam-A.full.gz, only the first 1000,000,000 bytes wer
 
 # Result:
 
-| type          | file size | read speed | 
-| ------------- |  ------: | ------: |
-| uncompressed  | 9703136359| 527 MB/s |
-| gzip          | 1000000000 |  220 MB/s  |
-| zstd          | 431850930 |  1536 MB/s |
+| type          | file size | read speed | read command |
+| ------------- |  ------: | ------: | -------------|
+| uncompressed  | 9703136359| 527 MB/s |  cat file > /dev/null          |
+| gzip  (using gunzip)   | 1000000000 |  220 MB/s  | gunzip -c file.gz  > /dev/null  |   
+| gzip  (using pigz) | 1000000000 |  417 MB/s  | pigz -d -c file.gz > /dev/null |
+| zstd          | 431850930 |  1536 MB/s |  zstdmt -d -c file.zst  > /dev/null |
 
 
 This benchmark was performed on a computer with
@@ -97,6 +98,14 @@ gzip: pfam.gz: unexpected end of file
 real	0m42,051s
 user	0m41,592s
 sys	0m0,420s
+testuser@linuxdesktop:~$ sync && sudo su -c "echo 3 > /proc/sys/vm/drop_caches"
+testuser@linuxdesktop:~$time pigz -d -c pfam.gz > /dev/null
+pigz: skipping: pfam.gz: corrupted -- incomplete deflate data
+pigz: abort: internal threads error
+
+real	0m21,865s
+user	0m32,466s
+sys	0m2,007s
 testuser@linuxdesktop:~$ 
 ```
 
