@@ -72,9 +72,9 @@ testuser@linuxdesktop:~$ gunzip -c pfam.gz > pfam.txt
 testuser@linuxdesktop:~$ ~/installdir/bin/zstdmt -19 pfam.txt
 pfam.txt              :  4.45%   (9703136359 => 431850930 bytes, pfam.txt.zst)   
 testuser@linuxdesktop:~$ ls -l pfam.*
--rw-r--r-- 1 root root 1000000000 jan  9 14:29 pfam.gz
--rw-r--r-- 1 root root 9703136359 jan  9 14:38 pfam.txt
--rw-r--r-- 1 root root  431850930 jan  9 14:49 pfam.txt.zst
+-rw-r--r-- 1 testuser testuser 1000000000 jan  9 14:29 pfam.gz
+-rw-r--r-- 1 testuser testuser 9703136359 jan  9 14:38 pfam.txt
+-rw-r--r-- 1 testuser testuser  431850930 jan  9 14:49 pfam.txt.zst
 testuser@linuxdesktop:~$ sync && sudo -c "echo 3 > /proc/sys/vm/drop_caches"
 testuser@linuxdesktop:~$ ~/installdir/bin/zstdmt -d -c pfam.txt.zst | pv --average-rate > /dev/null
 pfam.txt.zst         : 9703136359 bytes                                         
