@@ -45,7 +45,7 @@ If you read these instructions some time in the future replace __1.4.4__ with
 the latest version.
 
 
-1. Download the source package from https://github.com/facebook/zstd/releases into the local directory _~/Downloads/_
+1. Download the source package _zstd-1.4.4.tar.gz_ from https://github.com/facebook/zstd/releases into the local directory _~/Downloads/_
 2. Install the build requirements
    - On Fedora run `sudo dnf install cmake ninja-build`
    - On Ubuntu run `sudo apt-get install cmake ninja-build`
