@@ -16,8 +16,8 @@ Instead of using the whole Pfam-A.full.gz, only the first 1000,000,000 bytes wer
 This benchmark was performed on a computer with
 
 * __Disk__: HDD (i.e. a standard SATA mechanical hard drive).
-* __CPU__: AMD Ryzen 5 1600 Six-Core Processor
-* __Operating system__: Ubuntu 18.04.3
+* __CPU__: _AMD Ryzen 5 1600_, a six-core processor from 2017
+* __Operating system__: _Ubuntu 18.04.3_
 
 
 
