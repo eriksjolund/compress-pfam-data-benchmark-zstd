@@ -38,9 +38,9 @@ the latest version.
 
 
 1. Download the source package from https://github.com/facebook/zstd/releases into the local directory _~/Downloads/_
-2. Install the ninja build system
-   - On Fedora run `sudo dnf install ninja`
-   - On Ubuntu run `sudo apt-get install ninja-build`
+2. Install the build requirements
+   - On Fedora run `sudo dnf install cmake ninja-build`
+   - On Ubuntu run `sudo apt-get install cmake ninja-build`
 3. Run the commands
 
 ```
