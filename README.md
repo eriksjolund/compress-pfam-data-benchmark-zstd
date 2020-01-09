@@ -8,9 +8,9 @@ Instead of using the whole Pfam-A.full.gz, only the first 1000,000,000 bytes wer
 
 | type          | file size | read speed | 
 | ------------- |  ------: | ------: |
-| uncompressed  | 9703136359| 527MB/s |
-| gzip          | 1000000000 |  220MB/s  |
-| zstd          | 431850930 |  1536MB/s |
+| uncompressed  | 9703136359| 527 MB/s |
+| gzip          | 1000000000 |  220 MB/s  |
+| zstd          | 431850930 |  1536 MB/s |
 
 
 This benchmark was done on a computer with
